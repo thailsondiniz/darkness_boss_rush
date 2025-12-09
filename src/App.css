@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "@fontsource/press-start-2p";
+
+body {
+  font-family: "Press Start 2P";
+}
