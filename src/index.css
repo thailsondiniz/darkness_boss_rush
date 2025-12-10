@@ -25,3 +25,108 @@
   animation: floatUp 1s ease-out forwards;
   pointer-events: none;
 }
+
+@keyframes hitFlash {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(3) saturate(0);
+  }
+}
+
+.hit-flash {
+  animation: hitFlash 0.15s ease-out, hitPunch 0.2s ease-out;
+}
+
+@keyframes hitPunch {
+  0% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.1) rotate(-2deg); }
+  50% { transform: scale(0.95) rotate(2deg); }
+  75% { transform: scale(1.05) rotate(-1deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+.hit-punch {
+  animation: hitPunch 0.2s ease-out;
+}
+
+
+@keyframes screenShake {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5px, -5px); }
+  20% { transform: translate(5px, 5px); }
+  30% { transform: translate(-5px, 5px); }
+  40% { transform: translate(5px, -5px); }
+  50% { transform: translate(-3px, -3px); }
+  60% { transform: translate(3px, 3px); }
+  70% { transform: translate(-2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  90% { transform: translate(-1px, -1px); }
+}
+
+.screen-shake {
+  animation: screenShake 0.3s ease-out;
+}
+
+@keyframes impactRipple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 0 50px rgba(255, 0, 0, 0);
+  }
+}
+
+.impact-ripple {
+  animation: impactRipple 0.4s ease-out;
+}
+
+@keyframes bloodSplatter {
+  0% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0; transform: scale(1); }
+}
+
+.blood-splatter {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(183, 24, 46, 0.8) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: bloodSplatter 0.3s ease-out forwards;
+}
+
+@keyframes bossDying {
+  0% { 
+    opacity: 1; 
+    transform: scale(1) rotate(0deg);
+    filter: brightness(1);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.1) rotate(-5deg);
+    filter: brightness(2) saturate(0);
+  }
+  50% { 
+    opacity: 0.8; 
+    transform: scale(0.9) rotate(5deg);
+    filter: brightness(1.5) hue-rotate(90deg);
+  }
+  75% {
+    opacity: 0.5;
+    transform: scale(0.7) rotate(-10deg) translateY(30px);
+    filter: brightness(0.5);
+  }
+  100% { 
+    opacity: 0; 
+    transform: scale(0.3) rotate(15deg) translateY(100px);
+    filter: brightness(0);
+  }
+}
+
+.boss-dying {
+  animation: bossDying 1.5s ease-out forwards;
+  pointer-events: none;
+}
