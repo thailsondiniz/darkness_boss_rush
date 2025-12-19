@@ -12,7 +12,7 @@ const bosses = [
     nome: "TEMPLAR LORD OF DARKNESS",
     imagem: boss01,
     background: backgroundBoss01,
-    vida: 100,
+    vida: 500,
     frases: [
       { texto: "Você se atreve a me desafiar?", vidaMinima: 81 },
       { texto: "É só isso que você tem?", vidaMinima: 61 },
@@ -26,7 +26,7 @@ const bosses = [
     nome: "SHADOW KNIGHT",
     imagem: boss02,
     background: backgroundBoss02,
-    vida: 150,
+    vida: 500,
     frases: [
       { texto: "As trevas me obedecem!", vidaMinima: 121 },
       { texto: "Você é mais forte do que parece...", vidaMinima: 91 },
