@@ -28,6 +28,11 @@ const Login = () => {
       }
     }
   };
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    navigate('/register');
+  }
   return (
     <>
       <Toaster position="top-right" />
@@ -111,8 +116,8 @@ const Login = () => {
           <p className="mt-10 text-center text-sm/6 text-gray-400">
             Ainda não tem conta?{" "}
             <a
-              href="#"
-              className="font-semibold text-indigo-400 hover:text-indigo-300"
+              className="font-semibold text-indigo-400 hover:text-indigo-300 cursor-pointer"
+              onClick={handleClick}
             >
               Criar conta
             </a>

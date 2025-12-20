@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@fontsource/press-start-2p": "^5.2.7",
+    "@heroicons/react": "^2.2.0",
     "@tailwindcss/vite": "^4.1.17",
     "axios": "^1.13.2",
     "react": "^19.2.0",

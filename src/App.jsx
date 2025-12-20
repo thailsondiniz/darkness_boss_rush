@@ -3,6 +3,7 @@ import './App.css'
 import Home from './Home.jsx'
 import Login from './components/Login.jsx'
 import Register from './components/Register.jsx'
+import Create_Boss from './components/Create_Boss.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} /> 
+        <Route path='/create_boss' element={<Create_Boss />} />
       </Routes>
     </BrowserRouter>
     
